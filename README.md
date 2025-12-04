@@ -40,7 +40,7 @@ Under "Simulation", modify the Run Time (e.g., set to 1000ns).<br>
 
 **Verilog Code:** <br>
 **4:1 MUX Gate-Level Implementation:**
-```
+```verilog
 
 module mux_4_1_gat(a,s,out);
 input [3:0]a;
@@ -55,7 +55,7 @@ or (out,w[0],w[1],w[2],w[3]);
 endmodule
 ```
 **4:1 MUX Data Flow Implementation:**
-```
+```verilog
 
 module mux_4_1_dataflow (a,s,out);
 input [3:0]a;
@@ -67,7 +67,7 @@ endmodule
 ```
 
 **4:1 MUX Behavioral Implementation:**
-```
+```verilog
 
 module mux_4_1_behavioral (a,s,out);
 input [3:0]a;
@@ -87,7 +87,7 @@ endmodule
 ```
 
 **4:1 MUX Structural Implementation:** <br>
-```
+```verilog
 
 module mux2_to_1 (a,b,s,out);
 input s,a,b;
@@ -107,7 +107,7 @@ endmodule
 ```
 
 **Testbench Implementation:**
-```
+```verilog
 
 `timescale 1ns / 1ps
 module mux4_to_1_tb;
@@ -161,7 +161,7 @@ endmodule
 
 ```
 **Sample Output:**
-```
+```verilog
 
 Time=00 | s[1]=0 s[0]=0 | Inputs: a[0]=0 a[1]=0 a[2]=0 a[3]=0
         | out_gate=0 | out_dataflow=0 | out_behavioral=0 | out_structural=0
